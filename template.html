@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>TrackMyBooks</title>
+	<title>WhatShallWeCook</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
@@ -18,6 +18,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+	<link href="assets/css/main.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -34,14 +35,20 @@
 				<span class="navbar-toggler-bar"></span>
 				<span class="navbar-toggler-bar"></span>
 			</button>
-			<a class="navbar-brand" href="https://www.creative-tim.com">Track My Books</a>
+			<a class="navbar-brand" href="https://www.creative-tim.com">WhatShallWeCook</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbarToggler">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search for Books">
+					<div class="row">
+						<div class="col-lg-12">
+							<input type="text" class="form-control" placeholder="Search for Recipes" id="search">
+						</div>
 					</div>
+					
+				</li>
+				<li class="nav-item">
+					<button id="searchButton" type="button" class="btn btn-default btn-round btn-sm" onclick="searchResult()">Search</button>	
 				</li>
 			</ul>
 		</div>
@@ -55,21 +62,15 @@
 <div class="wrapper">
 
 	<!-- content come here     -->
-	<div class="page-header section-dark" style="background-image: url('assets/img/antoine-barres.jpg')">
+	<div class="page-header section-dark" style="background-image: url('assets/img/Cooking-Background.png')">
 		<div class="filter"></div>
 		<div class="content-center">
 			<div class="container">
 				<div class="title-brand">
-					<h1 class="presentation-title">Track My Books</h1>
-					<div class="fog-low">
-						<img src="assets/img/fog-low.png" alt="">
-					</div>
-					<div class="fog-low right">
-						<img src="assets/img/fog-low.png" alt="">
-					</div>
+					<h1 class="presentation-title">What Shall We Cook</h1>
 				</div>
 
-				<h2 class="presentation-subtitle text-center">Track your favourite Books  </h2>
+				<h2 class="presentation-subtitle text-center">Look for your favourite recipes  </h2>
 			</div>
 		</div>
 		<div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
@@ -80,8 +81,21 @@
 
 	<div class="main">
 		<div class="container">
+
+			<div id="searchResults">
+				<div class="tim-title">
+						<h2>Results</h2>
+					</div>
+			
+				<div class="row" id="searchedRecipes">
+
+				</div>
+			</div>
+
+
+
 			<div class="tim-title">
-				<h2>Plan to Read </h2>
+				<h2>My Favourite Recipes </h2>
 			</div>
 
 			<div class="row">
@@ -95,32 +109,24 @@
 			</div>
 
 			<div class="tim-title">
-				<h2>Reading </h2>
+				<h2>Categories</h2>
 			</div>
+	
+				<div class="row" id="categories">
 
-			<div class="row">
-				<div class="col-md-8">
-					<button type="button" class="btn btn-danger">Default</button>
-					<button type="button" class="btn btn-danger btn-round">Round</button>
-					<button type="button" class="btn btn-danger btn-round"><i class="fa fa-heart"></i> With Icon</button>
-					<button type="button" class="btn btn-danger btn-just-icon"><i class="fa fa-heart"></i></button>
-					<button type="button" class="btn btn-danger btn-link">Simple</button>
 				</div>
-			</div>
 
-			<div class="tim-title">
-				<h2>Finished</h2>
-			</div>
+				<div id="categoryResults">
+						<div class="tim-title">
+								<h2>Selected Category</h2>
+						</div>
+					
+						<div class="row" id="selectedCategory">
+		
+						</div>
+					</div>
 
-			<div class="row">
-				<div class="col-md-8">
-					<button type="button" class="btn btn-danger">Default</button>
-					<button type="button" class="btn btn-danger btn-round">Round</button>
-					<button type="button" class="btn btn-danger btn-round"><i class="fa fa-heart"></i> With Icon</button>
-					<button type="button" class="btn btn-danger btn-just-icon"><i class="fa fa-heart"></i></button>
-					<button type="button" class="btn btn-danger btn-link">Simple</button>
-				</div>
-			</div>
+
 		</div>
 	</div>
 
