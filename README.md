@@ -1,2 +1,2 @@
-# TrackMyBooks
-A Simple Web Application that lets you track your favorite books and add them to a list of "Plan to Read", "Reading" or "Finished Reading"
+# WhatShallWeCook
+A Simple Web Application that lets you go through different categories of food recipes and add your loved recipes to your favorites list.
