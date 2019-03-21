@@ -114,6 +114,8 @@ $(function(){
                     console.log(name);
                     let imgUrl = $(this).parent().parent().find("img").attr("src"); 
                     console.log(imgUrl);
+
+                    
                     db.add({
                         name: name,
                         imgUrl: imgUrl
